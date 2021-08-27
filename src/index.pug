@@ -1,0 +1,9 @@
+extends layout/header.pug
+
+block content
+    main(class="page")
+        include layout/slider.pug
+        include layout/lots.pug
+
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="./js/app.js")

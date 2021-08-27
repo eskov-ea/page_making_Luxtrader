@@ -1,0 +1,146 @@
+//< ОБНУДЕНИЕ >================================================================
+@import "reset-styles.scss";
+//</ ОБНУДЕНИЕ >================================================================
+
+//< МИКСИНЫ >================================================================
+@import "mixins.scss";
+//</ МИКСИНЫ >================================================================
+
+//< ШРИФТЫ >================================================================
+//< Подключение шрифтов >================================================================
+@import "fonts.scss";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+//< Шрифт по умолчанию >================================================================
+$font-family: "PT Sans";
+//</ ШРИФТЫ >================================================================
+
+//< ПЕРЕМЕННЫЕ >================================================================
+$minwidth: 320px;
+//Ширина основного контейнера
+$mw: 950;
+//Брейкпоинты
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ ПЕРЕМЕННЫЕ >================================================================
+
+//< ОСНОВНАЯ СЕТКА >================================================================
+body {
+    font-family: "PT Sans";
+}
+._container {
+    max-width: $mw + px;
+    margin: 0 auto;
+    // @media (max-width: $md1+px) {
+    //     max-width: 970px;
+    // }
+    // @media (max-width: $md2+px) {
+    //     max-width: 750px;
+    // }
+    @media (max-width: $md3+px) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+//</ ОСНОВНАЯ СЕТКА >================================================================
+//TODO <BUTTON STYLE> ==========================================================================================
+.btn {
+    position: relative;
+    display: inline-flex;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 100%;
+    }
+    &:before {
+        top: 0;
+        background-color: #bb9c66;
+    }
+    &:after {
+        bottom: 0;
+        background-color: #8e662f;
+    }
+    &__body {
+        display: inline-flex;
+        padding: 0px 0px;
+        justify-content: center;
+        align-items: center;
+        min-height: 50px;
+        position: relative;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 3px;
+            height: 100%;
+        }
+        &:before {
+            left: 0;
+            background-image: linear-gradient(to top, #8e662f, #bb9c66);
+        }
+        &:after {
+            right: 0;
+            background-image: linear-gradient(to top, #8e662f, #bb9c66);
+        }
+        span {
+            color: #ffffff;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-family: "PFDin";
+            letter-spacing: 1.5px;
+            position: relative;
+            padding: 0 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:after {
+                content: "";
+                height: 200%;
+                background-image: linear-gradient(to top, #bb9c66 0%, rgba(187, 156, 102, 0) 100%);
+                width: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                opacity: 0.1;
+                transition: all 0.5s ease 0s;
+            }
+        }
+    }
+    &__big {
+        display: flex;
+        justify-content: center;
+        .btn__body {
+            position: static;
+            span {
+                font-size: 21px;
+                color: #000;
+                font-weight: 500;
+                padding: 0px 25px;
+                letter-spacing: 0px;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &:hover {
+            .btn__body span {
+                &:after {
+                    height: -50%;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+//< ПОДКЛЮЧАЕМ СТИЛИ HEADER >================================================================
+@import "header.scss";
+//</ ПОДКЛЮЧАЕМ СТИЛИ HEADER'a >================================================================
+
+//< ПОДКЛЮЧАЕМ СТИЛИ ЛЭЙАУТОВ >================================================================
+@import "slider.scss";
+@import "lots.scss";
+//</ ПОДКЛЮЧАЕМ СТИЛИ ЛЭЙАУТОВ >================================================================
