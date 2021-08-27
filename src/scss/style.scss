@@ -29,6 +29,13 @@ $md4: 479.98;
 body {
     font-family: "PT Sans";
 }
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 ._container {
     max-width: $mw + px;
     margin: 0 auto;

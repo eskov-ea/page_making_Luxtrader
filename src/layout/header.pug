@@ -10,50 +10,51 @@ html(lang="en")
         link(rel="stylesheet", href="./css/style.min.css")
         title Page making test
     body
-        header(class="header")
-            div(class="header__container _container")
-                div(class="menu__icon icon-menu")
-                    span
-                    span
-                    span
-                a(href="#" class="header__logo")
-                    img(src="./images/logo.png" alt="")
-                div(class="header__menu menu")
-                    nav(class="menu__body")
-                        ul(class="menu__list")
-                            li(class="menu__link")
-                                a(class="" href="#") Главная
-                            li(class="menu__link")
-                                a(class="" href="#") Аукцион
-                            li(class="menu__link")
-                                a(class="" href="#") О проекте
-                            li(class="menu__link")
-                                a(class="" href="#") Партнерам
-                            li(class="menu__link")
-                                a(class="" href="#") Контакты
-                            li(class="menu__link header_globe_mobile") 
-                                a(class="" href="#") Выбор региона
-                                    //- img(src="./images/globe.png" alt="")
-                div(class="header__actions actions-header")
-                    img(class="header_globe_decstop" src="./images/globe.png" alt="")
-                    a(class="actions-header__region" href="#") 
-                        span Выбор региона
-                    div(class="actions-header__user user-header")
-                        div(class="user-header__icon")
-                            img(src="./images/user-snipet.png" alt="")
-                        ul(class="user-header__menu")
-                            li
-                                a(class="user-header__link user-header__link_1" href="#") Выбор региона
-                                    img(src="#" alt="")
-                            li
-                                a(class="user-header__link user-header__link_2" href="#") Личный кабинет
-                                    img(src="#" alt="")
-                            li
-                                a(class="user-header__link user-header__link_3" href="#") Мои ставки
-                                    img(src="#" alt="")
-                            li
-                                a(class="user-header__link user-header__link_4" href="#") Мои лоты
-                                    img(src="#" alt="")
-                        
+        div(class="wrapper")
+            header(class="header")
+                div(class="header__container _container")
+                    div(class="menu__icon icon-menu")
+                        span
+                        span
+                        span
+                    a(href="#" class="header__logo")
+                        img(src="./images/logo.png" alt="")
+                    div(class="header__menu menu")
+                        nav(class="menu__body")
+                            ul(class="menu__list")
+                                li(class="menu__link")
+                                    a(class="" href="#") Главная
+                                li(class="menu__link")
+                                    a(class="" href="#") Аукцион
+                                li(class="menu__link")
+                                    a(class="" href="#") О проекте
+                                li(class="menu__link")
+                                    a(class="" href="#") Партнерам
+                                li(class="menu__link")
+                                    a(class="" href="#") Контакты
+                                li(class="menu__link header_globe_mobile") 
+                                    a(class="" href="#") Выбор региона
+                                        //- img(src="./images/globe.png" alt="")
+                    div(class="header__actions actions-header")
+                        img(class="header_globe_decstop" src="./images/globe.png" alt="")
+                        a(class="actions-header__region" href="#") 
+                            span Выбор региона
+                        div(class="actions-header__user user-header")
+                            div(class="user-header__icon")
+                                img(src="./images/user-snipet.png" alt="")
+                            ul(class="user-header__menu")
+                                li
+                                    a(class="user-header__link user-header__link_1" href="#") Выбор региона
+                                        img(src="#" alt="")
+                                li
+                                    a(class="user-header__link user-header__link_2" href="#") Личный кабинет
+                                        img(src="#" alt="")
+                                li
+                                    a(class="user-header__link user-header__link_3" href="#") Мои ставки
+                                        img(src="#" alt="")
+                                li
+                                    a(class="user-header__link user-header__link_4" href="#") Мои лоты
+                                        img(src="#" alt="")
+                            
 
-        block content
+            block content
