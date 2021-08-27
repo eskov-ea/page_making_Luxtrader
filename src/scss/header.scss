@@ -1,7 +1,10 @@
 .header {
     background-color: #1c242a;
-    position: relative;
     z-index: 50;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     &__container {
         position: relative;
         display: flex;
