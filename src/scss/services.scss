@@ -1,0 +1,97 @@
+.services {
+    background-color: #1c242a;
+    padding: 60px 0;
+    @media (max-width: 640px) {
+        padding: 40px 0 0 0;
+    }
+    &__row {
+        margin: 0 -50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__column {
+        padding: 0 50px;
+        flex: 0 1 33.333%;
+        margin: 0 0 40px 0;
+        @media (max-width: 975px) {
+            flex: 0 1 50%;
+        }
+        @media (max-width: 640px) {
+            flex: 0 1 100%;
+        }
+    }
+    &__container {
+        max-width: 970px;
+        padding: 0 10px;
+    }
+
+    &__header {
+        margin: 0 0 40px 0;
+    }
+    &__item {
+    }
+}
+.service {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    &__image {
+        height: 205px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 20px 0;
+    }
+
+    &__title {
+        flex: 1 1 auto;
+        font-size: 21px;
+        color: #ffffff;
+        font-weight: 500;
+        font-family: "PFDin";
+        text-transform: uppercase;
+        line-height: calc(25 / 21);
+        letter-spacing: 1.1px;
+    }
+
+    &__text {
+        color: #bb9c66;
+        font-family: "PT Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: calc(25 / 15);
+        margin: 23px 0 0 0;
+        min-height: 50px;
+        overflow: hidden;
+    }
+
+    &__btn {
+        position: relative;
+        font-size: 21px;
+        color: #ffffff;
+        font-weight: 500;
+        font-family: "PFDin";
+        text-transform: uppercase;
+        letter-spacing: 2.1px;
+        margin: 30px 0 0 0;
+        &:before {
+            content: "";
+            position: absolute;
+            background-color: #bb9c66;
+            height: 1px;
+            width: 100%;
+            top: 50%;
+            left: 0;
+        }
+        span {
+            background-color: #1c242a;
+            position: relative;
+            z-index: 2;
+            padding: 0 15px;
+        }
+    }
+}

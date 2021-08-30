@@ -11,6 +11,10 @@ let menuBody = document.querySelector('.menu__body')
 iconMenu.addEventListener('click', function (e) {
     iconMenu.classList.toggle('_active')
     menuBody.classList.toggle('_active')
+    // Убираем скролл при открытом меню
+    document.querySelector('body').classList.toggle('_lock')
+    // if (menuBody.classList.contains('_active')) {
+    // }
 })
 
 // Закрываем меню пользователя при клике мимо самого меню
@@ -20,3 +24,4 @@ document.addEventListener('click', function (e) {
         user_menu.classList.remove('_active')
     }
 })
+

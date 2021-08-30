@@ -68,8 +68,8 @@ const watchFiles = () => {
     // gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.pug], pug);
     gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.images], imagef);
     gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.images], imagef);
 }
 
 //<Работа с HTML>===========================================================================
@@ -88,7 +88,7 @@ const pug = () => {
                 pretty: true,
                 basedir: __dirname
             }))
-        .pipe(webphtml())
+        // .pipe(webphtml())
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
@@ -220,6 +220,7 @@ exports.deploy_project = deploy_project
 // exports.html = html
 exports.pug = pug
 exports.css = css
+exports.clean = clean
 exports.build = build
 exports.watch = watch
 exports.default = watch

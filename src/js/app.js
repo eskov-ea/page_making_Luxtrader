@@ -1,2 +1,4 @@
+@@include('./smothscroll.js', {});
 @@include('./slider.js', {});
-@@include('./script.js', {})
+@@include('./slideScroll.js', {});
+@@include('./script.js', {});

@@ -72,3 +72,38 @@ const lots_swlider = new Swiper('.slider-lots__body', {
         }
     }
 });
+
+const quotes_swlider = new Swiper('.slider-quotes__body', {
+    effect: 'fade',
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // autoHeight: true,
+    observer: true,
+    observeParents: true,
+    spaceBetween: 0,
+    slidesPerView: 1,
+    speed: 900,
+
+    // If we need pagination`
+    // pagination: {
+    //     el: '.swiper-pagination',
+    // },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.controls-slider-quotes__circle',
+    },
+    breakpoints: {
+        320: {
+            autoHeight: true
+        },
+        570: {
+            autoHeight: false
+        }
+    }
+    // And if we need scrollbar
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    // },
+});

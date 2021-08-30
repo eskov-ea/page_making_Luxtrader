@@ -1,0 +1,107 @@
+.footer {
+    background-color: #1c242a;
+    padding: 45px 0;
+    &__content {
+        display: flex;
+        @media (max-width: 767px) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__column {
+        &_full {
+            flex: 1 1 auto;
+        }
+        &:first-child {
+            flex: 0 0 180px;
+        }
+        @media (max-width: 767px) {
+            &:last-child {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin: 0 0 25px 0;
+    }
+
+    &__info {
+        color: #bb9c66;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__menu {
+        padding: 0 30px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+            margin: 15px 15px 0px 0;
+        }
+        @media (max-width: 767px) {
+            justify-content: center;
+            margin: 15px 7px 0px 7px;
+        }
+    }
+
+    &__link {
+        color: #ffffff;
+        font-family: "PFDin";
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        @media (min-width: 992px) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__contacts {
+        padding: 15px 0 0 0;
+        text-align: right;
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+    }
+    &__phone {
+        display: flex;
+        white-space: nowrap;
+        & small {
+            font-size: 25px;
+            color: #bb9c66;
+            font-family: "BravoRGRegular";
+            margin: 2px 5px 0 0;
+        }
+        &_link {
+            color: #bb9c66;
+            font-size: 50px;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: "BravoRGRegular";
+        }
+        @media (max-width: 992px) {
+            font-size: 40px;
+            small {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__callback {
+        color: #bb9c66;
+        background: url(../images/icons/callback.svg) left no-repeat;
+        padding: 0 0 0 12px;
+        span {
+            border-bottom: 1px dashed;
+        }
+    }
+}

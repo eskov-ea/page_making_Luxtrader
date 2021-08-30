@@ -17,7 +17,7 @@ $font-family: "PT Sans";
 //< ПЕРЕМЕННЫЕ >================================================================
 $minwidth: 320px;
 //Ширина основного контейнера
-$mw: 950;
+$mw: 970;
 //Брейкпоинты
 $md1: $mw + 12;
 $md2: 991.98;
@@ -28,6 +28,9 @@ $md4: 479.98;
 //< ОСНОВНАЯ СЕТКА >================================================================
 body {
     font-family: "PT Sans";
+    &._lock {
+        overflow: hidden;
+    }
 }
 ._wrapper {
     width: 100%;
@@ -39,13 +42,19 @@ body {
 ._container {
     max-width: $mw + px;
     margin: 0 auto;
+    padding: 0 10px;
     @media (max-width: $md3+px) {
         max-width: none;
         padding: 0 10px;
     }
 }
+.page {
+    flex: 1 1 auto;
+    padding: 75px 0 0 0;
+}
 //</ ОСНОВНАЯ СЕТКА >================================================================
-//TODO <BUTTON STYLE> ==========================================================================================
+
+// <BUTTON STYLE> ==========================================================================================
 .btn {
     position: relative;
     display: inline-flex;
@@ -137,6 +146,39 @@ body {
         }
     }
 }
+// </BUTTON STYLE> ==========================================================================================
+
+// <INPUT STYLE> ==========================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input {
+    border-right: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 25px;
+    color: #4f4f4f;
+    font-size: 15px;
+    &._focus {
+        color: #000;
+    }
+    &._error {
+    }
+}
+
+textarea.input {
+    resize: none;
+    padding: 0px 0px;
+}
+// </ INPUT STYLE> ==========================================================================================
+
 //< ПОДКЛЮЧАЕМ СТИЛИ HEADER >================================================================
 @import "header.scss";
 //</ ПОДКЛЮЧАЕМ СТИЛИ HEADER'a >================================================================
@@ -144,4 +186,9 @@ body {
 //< ПОДКЛЮЧАЕМ СТИЛИ ЛЭЙАУТОВ >================================================================
 @import "slider.scss";
 @import "lots.scss";
+@import "categories.scss";
+@import "services.scss";
+@import "quotes.scss";
+@import "info.scss";
+@import "footer.scss";
 //</ ПОДКЛЮЧАЕМ СТИЛИ ЛЭЙАУТОВ >================================================================
