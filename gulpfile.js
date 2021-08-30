@@ -101,9 +101,9 @@ const css = () => {
                 allowEmpty: true
             })
         )
-        // .pipe(
-        //     group_media()
-        // )
+        .pipe(
+            group_media()
+        )
         .pipe(dest(path.build.css))
         .pipe(clean_css())
         .pipe(
